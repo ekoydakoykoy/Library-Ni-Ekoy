@@ -1,28 +1,40 @@
-const rootStyles = window.getComputedStyle(document.documentElement);
+FilePond.registerPlugin(
+    FilePondPluginImagePreview,
+    FilePondPluginImageResize,
+    FilePondPluginFileEncode,    
+)
+FilePond.setOptions({
+    stylePanelAspectRatio: 150/200,
+    imageResizeTargetHeight: 200,
+    imageResizeTargetWidth: 150
+});
 
-if( rootStyles.getPropertyValue('--book-cover-width-large') != null &&
-rootStyles.getPropertyValue('--book-cover-width-large') != '' ) {
-    readyNow();
-} else {
-    document.getElementById('main-css').addEventListener('load', ready);
-}
+FilePond.parse(document.body);
+// const rootStyles = window.getComputedStyle(document.documentElement);
 
-function readyNow() {
-    const coverWidth = parseFloat(rootStyles.getPropertyValue('--book-cover-width-large'));
-    const coverAspectRatio = parseFloat(rootStyles.getPropertyValue('--book-cover-aspect-ratio'));
-    const coverHeight = coverWidth / coverAspectRatio;
+// if( rootStyles.getPropertyValue('--book-cover-width-large') != null &&
+// rootStyles.getPropertyValue('--book-cover-width-large') != '' ) {
+//     readyNow();
+// } else {
+//     document.getElementById('main-css').addEventListener('load', ready);
+// }
+
+// function readyNow() {
+//     const coverWidth = parseFloat(rootStyles.getPropertyValue('--book-cover-width-large'));
+//     const coverAspectRatio = parseFloat(rootStyles.getPropertyValue('--book-cover-aspect-ratio'));
+//     const coverHeight = coverWidth / coverAspectRatio;
 
 
-    FilePond.registerPlugin(
-        FilePondPluginImagePreview,
-        FilePondPluginImageResize,
-        FilePondPluginFileEncode,    
-    )
-    FilePond.setOptions({
-        stylePanelAspectRatio: 1 / coverAspectRatio,
-        imageResizeTargetHeight: coverHeight,
-        imageResizeTargetWidth: coverWidth
-    });
+//     FilePond.registerPlugin(
+//         FilePondPluginImagePreview,
+//         FilePondPluginImageResize,
+//         FilePondPluginFileEncode,    
+//     )
+//     FilePond.setOptions({
+//         stylePanelAspectRatio: 1 / coverAspectRatio,
+//         imageResizeTargetHeight: coverHeight,
+//         imageResizeTargetWidth: coverWidth
+//     });
     
-    FilePond.parse(document.body);
-}
+//     FilePond.parse(document.body);
+// }
