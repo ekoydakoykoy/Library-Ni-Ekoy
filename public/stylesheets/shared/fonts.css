@@ -1,55 +1,46 @@
 /* convert fonts to generate into css via Transfonter */
+@font-face {
+    font-family: 'LEIXO DEMO';
+    src: url('/fonts/LEIXO-DEMO.woff2') format('woff2'),
+        url('/fonts/LEIXO-DEMO.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 @font-face {
-    font-family: 'Bebas Neue';
-    src: url('/fonts/BebasNeueBold.woff2') format('woff2'),
-        url('/fonts/BebasNeueBold.woff') format('woff');
+    font-family: 'Optima';
+    src: url('/fonts/Optima-Bold.woff2') format('woff2'),
+        url('/fonts/Optima-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Bebas Neue Book';
-    src: url('/fonts/BebasNeueBook.woff2') format('woff2'),
-        url('/fonts/BebasNeueBook.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Optima';
+    src: url('/fonts/Optima-Medium.woff2') format('woff2'),
+        url('/fonts/Optima-Medium.woff') format('woff');
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Bebas Neue';
-    src: url('/fonts/BebasNeueLight.woff2') format('woff2'),
-        url('/fonts/BebasNeueLight.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Bebas Neue';
-    src: url('/fonts/BebasNeue-Thin.woff2') format('woff2'),
-        url('/fonts/BebasNeue-Thin.woff') format('woff');
+    font-family: 'Optima';
+    src: url('/fonts/Optima-Italic.woff2') format('woff2'),
+        url('/fonts/Optima-Italic.woff') format('woff');
     font-weight: 100;
-    font-style: normal;
+    font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Bebas Neue';
-    src: url('/fonts/BebasNeueRegular.woff2') format('woff2'),
-        url('/fonts/BebasNeueRegular.woff') format('woff');
+    font-family: 'Optima';
+    src: url('/fonts/Optima.woff2') format('woff2'),
+        url('/fonts/Optima.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Bebas Neue';
-    src: url('/fonts/BebasNeue.woff2') format('woff2'),
-        url('/fonts/BebasNeue.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
