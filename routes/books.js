@@ -43,15 +43,15 @@ router.post('/',  async(req, res) => {
         description: req.body.description
     });
 
-    // saveCover(book, req.body.cover); //commented
+     saveCover(book, req.body.cover); //commented
 
     try {
         // added
-        const savedCover = saveCover(book, req.body.cover) 
-        if(savedCover != true) {
-            renderNewPage(res, book, true)
-            return
-        }
+        // const savedCover = saveCover(book, req.body.cover);
+        // if(savedCover != true) {
+        //     renderNewPage(res, book, true);
+        //     return
+        // }
         //end added
         const newBook = await book.save();   
         res.redirect(`books/${newBook.id}`)         
@@ -152,15 +152,15 @@ async function renderFormPage(res, book, form, hasError = false){
 }
 
 function saveCover(book, coverEncoded ){
-    //if( coverEncoded == null) return //commented
-    if( coverEncoded == null) return false
+    if( coverEncoded == null) return //commented
+   // if( coverEncoded == null) return false
     const cover = JSON.parse(coverEncoded);
     if( cover != null && imageMimeTypes.includes(cover.type) ){
         book.coverImage = new Buffer.from(cover.data, 'base64');
         book.coverImageType = cover.type;
     }
     //added
-    return true;
+    //return true;
 }
 
 module.exports = router;
